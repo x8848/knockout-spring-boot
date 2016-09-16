@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>mobenga</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<button onclick="goBack()" data-bind="visible: players() == null">go back</button>
+
+<ul class="list" data-bind="foreach: players">
+    <li data-bind="click: $root.goToPlayer">
+        <span data-bind="text: name"></span>
+    </li>
+</ul>
+
+<ul data-bind="foreach: playerContent">
+    <li data-bind="text: key + ': ' + value"></li>
+</ul>
+
+<script type='text/javascript' src='js/jquery-1.11.2.min.js'></script>
+<script type='text/javascript' src='js/knockout-3.3.0.js'></script>
+<script type="text/javascript" src="js/sammy-latest.min.js"></script>
+<script type='text/javascript' src='js/players.js'></script>
+
+</body>
+</html>
